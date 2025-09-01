@@ -1,4 +1,4 @@
-# BlogRepository
+# PostRepository
 
 ## Purpose
 Provides data access layer for blog posts with user-scoped security, implementing CRUD operations and scope-based filtering to ensure users can only access their own posts.
