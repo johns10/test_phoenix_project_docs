@@ -3,9 +3,7 @@
 ## Purpose
 Provides data access layer for blog posts with user-scoped security, implementing CRUD operations and scope-based filtering to ensure users can only access their own posts.
 
-## Core Operations/Public API
-
-### Basic CRUD
+## Public API
 ```elixir
 @spec list_posts(Scope.t()) :: [Post.t()]
 @spec get_post!(Scope.t(), id :: integer()) :: Post.t()
@@ -14,6 +12,10 @@ Provides data access layer for blog posts with user-scoped security, implementin
 @spec delete_post(Scope.t(), Post.t()) :: {:ok, Post.t()} | {:error, Ecto.Changeset.t()}
 @spec change_post(Scope.t(), Post.t(), attrs :: map()) :: Ecto.Changeset.t()
 ```
+
+## Execution Flow
+
+It does the thing
 
 ## Function Descriptions
 
