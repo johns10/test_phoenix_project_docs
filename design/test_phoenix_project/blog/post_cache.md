@@ -84,7 +84,7 @@ end
 
 ### Cache-Aside Pattern
 ```elixir
-# In BlogRepository
+# In PostRepository
 def get_post!(%Scope{} = scope, id) do
   case PostCache.get_post(scope, id) do
     {:ok, post} -> 
