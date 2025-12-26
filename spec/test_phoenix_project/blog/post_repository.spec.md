@@ -37,9 +37,9 @@ Retrieves a single post by ID for the scoped user, raising if not found or not o
 3. Return the post
 
 **Test Assertions**:
-- get_post!/2 returns post when found and owned by scoped user
-- get_post!/2 raises Ecto.NoResultsError when post not found
-- get_post!/2 raises Ecto.NoResultsError when post owned by different user
+- returns post when found and owned by scoped user
+- raises Ecto.NoResultsError when post not found
+- raises Ecto.NoResultsError when post owned by different user
 
 ### create_post/2
 
@@ -109,8 +109,8 @@ Returns a changeset for tracking post changes without persistence.
 2. Return changeset for form generation and validation
 
 **Test Assertions**:
-- change_post/3 returns changeset for post
-- change_post/3 includes validation errors in changeset
+- returns changeset for post
+- includes validation errors in changeset
 
 ## Dependencies
 
