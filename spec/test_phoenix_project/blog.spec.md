@@ -17,6 +17,12 @@ The broadcasted messages match the pattern:
 - `{:updated, %Post{}}`
 - `{:deleted, %Post{}}`
 
+**Test Assertions**:
+- subscribes to post notifications
+- receives created message when post created
+- receives updated message when post updated
+- receives deleted message when post deleted
+
 ### list_posts/1
 
 ```elixir
@@ -24,6 +30,10 @@ The broadcasted messages match the pattern:
 ```
 
 Returns the list of posts for the given scope.
+
+**Test Assertions**:
+- returns all posts for scoped user
+- filters posts by user scope
 
 ### get_post!/2
 
@@ -33,6 +43,10 @@ Returns the list of posts for the given scope.
 
 Gets a single post. Raises `Ecto.NoResultsError` if the Post does not exist.
 
+**Test Assertions**:
+- returns the post with given id
+- raises when post does not exist
+
 ### create_post/2
 
 ```elixir
@@ -40,6 +54,11 @@ Gets a single post. Raises `Ecto.NoResultsError` if the Post does not exist.
 ```
 
 Creates a post and broadcasts a creation notification.
+
+**Test Assertions**:
+- creates a post with valid data
+- broadcasts created notification
+- returns error changeset with invalid data
 
 ### update_post/3
 
@@ -49,6 +68,11 @@ Creates a post and broadcasts a creation notification.
 
 Updates a post and broadcasts an update notification.
 
+**Test Assertions**:
+- updates the post with valid data
+- broadcasts updated notification
+- returns error changeset with invalid data
+
 ### delete_post/2
 
 ```elixir
@@ -57,6 +81,10 @@ Updates a post and broadcasts an update notification.
 
 Deletes a post and broadcasts a deletion notification.
 
+**Test Assertions**:
+- deletes the post
+- broadcasts deleted notification
+
 ### change_post/3
 
 ```elixir
@@ -64,3 +92,6 @@ Deletes a post and broadcasts a deletion notification.
 ```
 
 Returns an `%Ecto.Changeset{}` for tracking post changes.
+
+**Test Assertions**:
+- returns a post changeset
