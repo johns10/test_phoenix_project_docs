@@ -19,9 +19,9 @@ Returns all posts owned by the scoped user.
 2. Return all matching posts
 
 **Test Assertions**:
-- list_posts/1 returns all posts for scoped user
-- list_posts/1 returns empty list when user has no posts
-- list_posts/1 does not return posts from other users
+- returns all posts for scoped user
+- returns empty list when user has no posts
+- does not return posts from other users
 
 ### get_post!/2
 
@@ -55,10 +55,10 @@ Creates a new post with automatic user ownership assignment.
 3. Return {:ok, post} on success or {:error, changeset} on failure
 
 **Test Assertions**:
-- create_post/2 creates post with valid attributes
-- create_post/2 sets user_id from scope
-- create_post/2 returns error changeset for invalid attributes
-- create_post/2 validates required fields
+- creates post with valid attributes
+- sets user_id from scope
+- returns error changeset for invalid attributes
+- validates required fields
 
 ### update_post/3
 
@@ -75,9 +75,9 @@ Updates an existing post after verifying ownership.
 4. Return {:ok, post} on success or {:error, changeset} on failure
 
 **Test Assertions**:
-- update_post/3 updates post with valid attributes
-- update_post/3 returns error changeset for invalid attributes
-- update_post/3 raises MatchError when user does not own post
+- updates post with valid attributes
+- returns error changeset for invalid attributes
+- raises MatchError when user does not own post
 
 ### delete_post/2
 
@@ -93,8 +93,8 @@ Deletes a post after verifying ownership.
 3. Return {:ok, post} on success
 
 **Test Assertions**:
-- delete_post/2 deletes post when user owns it
-- delete_post/2 raises MatchError when user does not own post
+- deletes post when user owns it
+- raises MatchError when user does not own post
 
 ### change_post/3
 
