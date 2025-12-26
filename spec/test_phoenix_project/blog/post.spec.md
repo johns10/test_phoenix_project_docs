@@ -30,15 +30,15 @@ Creates a changeset for post creation and updates with scope-aware user assignme
 
 ## Fields
 
-| Field       | Type         | Required   | Description                    | Constraints    |
-| ----------- | ------------ | ---------- | ------------------------------ | -------------- |
-| id          | integer      | Yes (auto) | Primary key                    | Auto-generated |
-| title       | string       | Yes        | Post title for display         |                |
-| content     | string       | Yes        | Main post content              |                |
-| published   | boolean      | Yes        | Publication status             | Default: false |
-| user_id     | integer      | Yes        | Post owner reference           | Set via scope  |
-| inserted_at | utc_datetime | Yes (auto) | Creation timestamp             | Auto-generated |
-| updated_at  | utc_datetime | Yes (auto) | Last update timestamp          | Auto-generated |
+| Field       | Type         | Required   | Description            | Constraints    |
+| ----------- | ------------ | ---------- | ---------------------- | -------------- |
+| id          | integer      | Yes (auto) | Primary key            | Auto-generated |
+| title       | string       | Yes        | Post title for display |                |
+| content     | string       | Yes        | Main post content      |                |
+| published   | boolean      | Yes        | Publication status     | Default: false |
+| user_id     | integer      | Yes        | Post owner reference   | Set via scope  |
+| inserted_at | utc_datetime | Yes (auto) | Creation timestamp     | Auto-generated |
+| updated_at  | utc_datetime | Yes (auto) | Last update timestamp  | Auto-generated |
 
 ## Dependencies
 
