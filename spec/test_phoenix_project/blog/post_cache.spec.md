@@ -20,8 +20,8 @@ Starts the cache process.
 3. Return start result
 
 **Test Assertions**:
-- start_link/1 starts the cache process
-- start_link/1 registers process with module name
+- starts the cache process
+- registers process with module name
 
 ### store/2
 
@@ -37,8 +37,8 @@ Stores a post in the cache.
 3. Return :ok
 
 **Test Assertions**:
-- store/2 caches a post by ID
-- store/2 overwrites existing cached post with same ID
+- caches a post by ID
+- overwrites existing cached post with same ID
 
 ### get/1
 
@@ -54,8 +54,8 @@ Retrieves a post from the cache.
 3. Return {:error, :not_found} if not found
 
 **Test Assertions**:
-- get/1 returns cached post when it exists
-- get/1 returns error tuple when post not cached
+- returns cached post when it exists
+- returns error tuple when post not cached
 
 ### delete/1
 
@@ -70,8 +70,8 @@ Removes a post from the cache.
 2. Return :ok regardless of whether post existed
 
 **Test Assertions**:
-- delete/1 removes cached post
-- delete/1 returns :ok when post not found
+- removes cached post
+- returns :ok when post not found
 
 ### clear/0
 
@@ -86,7 +86,7 @@ Clears all posts from the cache.
 2. Return :ok
 
 **Test Assertions**:
-- clear/0 removes all cached posts
+- removes all cached posts
 
 ## Dependencies
 
